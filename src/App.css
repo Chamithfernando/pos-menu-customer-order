@@ -1,0 +1,19 @@
+/* App.css intentionally left minimal — all styles are now handled by Tailwind CSS */
+
+/* Floating item animation for cart add effect */
+@keyframes floatToCart {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+
+    20% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(20vw, -80vh) scale(0.2);
+        opacity: 0;
+    }
+}
