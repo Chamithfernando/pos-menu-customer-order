@@ -152,7 +152,7 @@ function App() {
     );
 
     return (
-        <div className="flex h-screen w-screen bg-gray-50 dark:bg-gray-950 font-sans overflow-hidden transition-colors duration-300">
+        <div className="flex h-screen w-screen bg-gray-50 dark:bg-gray-950 font-sans overflow-hidden transition-colors duration-300" style={{ height: '100dvh' }}>
             {/* Overlay */}
             {(isSidebarOpen || isOrderPanelOpen) && (
                 <div
@@ -179,7 +179,7 @@ function App() {
                 shadow-premium-lg transition-transform duration-300 ease-in-out
                 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
             `}>
-                <div className="p-6">
+                <div className="pt-safe p-6">
                     <h1 className="text-2xl font-extrabold text-orange-500 tracking-tight">RestroBit</h1>
                     <p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5 font-medium">Point of Sale</p>
                 </div>
@@ -213,7 +213,7 @@ function App() {
             {/* ─── Main Content ─── */}
             <main className="flex-1 flex flex-col overflow-hidden">
                 {/* Header */}
-                <header className="flex items-center gap-4 px-6 py-4 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 shrink-0 shadow-sm">
+                <header className="flex items-center gap-3 px-4 py-3 lg:px-6 lg:py-4 pt-safe bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 shrink-0 shadow-sm">
                     <button
                         onClick={() => setIsSidebarOpen(true)}
                         className="lg:hidden flex items-center justify-center w-10 h-10 rounded-xl border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -268,7 +268,7 @@ function App() {
                 </header>
 
                 {/* Scrollable Content */}
-                <div className="flex-1 overflow-y-auto scrollbar-hide p-6 space-y-6">
+                <div className="flex-1 overflow-y-auto scrollbar-hide px-4 py-5 lg:p-6 pb-safe space-y-6">
                     {/* Order Type Toggle */}
                     {!searchQuery && (
                         <div className="flex justify-center">
@@ -305,7 +305,7 @@ function App() {
                                     <History size={18} className="text-orange-500" />
                                     <h2 className="font-bold text-gray-800 dark:text-gray-100">Recent Purchases</h2>
                                 </div>
-                                <div className="grid grid-cols-3 gap-4">
+                                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                                     {RECENT_PURCHASES.map((item, idx) => (
                                         <div
                                             key={`recent-${idx}`}
@@ -330,7 +330,7 @@ function App() {
                                     <TrendingUp size={18} className="text-orange-500" />
                                     <h2 className="font-bold text-gray-800 dark:text-gray-100">Popular Items</h2>
                                 </div>
-                                <div className="grid grid-cols-3 gap-4">
+                                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                                     {POPULAR_ITEMS.map((item, idx) => (
                                         <div
                                             key={`popular-${idx}`}
@@ -450,7 +450,7 @@ function App() {
                 </div>
 
                 {/* Order Summary */}
-                <div className="p-5 border-t border-gray-100 dark:border-gray-800 space-y-3">
+                <div className="p-5 pb-safe border-t border-gray-100 dark:border-gray-800 space-y-3">
                     {[['Subtotal', subtotal], ['Tax (10%)', tax]].map(([label, value]) => (
                         <div key={label} className="flex justify-between text-sm text-gray-500 dark:text-gray-400">
                             <span>{label}</span>
