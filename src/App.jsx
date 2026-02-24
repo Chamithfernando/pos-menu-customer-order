@@ -213,7 +213,7 @@ function App() {
             {/* ─── Main Content ─── */}
             <main className="flex-1 flex flex-col overflow-hidden">
                 {/* Header */}
-                <header className="flex items-center gap-3 px-4 py-3 lg:px-6 lg:py-4 pt-safe bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 shrink-0 shadow-sm">
+                <header className="flex items-center gap-3 px-4 py-3 pt-8 lg:pt-4 lg:px-6 lg:py-4 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 shrink-0 shadow-sm">
                     <button
                         onClick={() => setIsSidebarOpen(true)}
                         className="lg:hidden flex items-center justify-center w-10 h-10 rounded-xl border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
